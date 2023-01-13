@@ -1,0 +1,17 @@
+.user-div {
+    width: 650px;
+    height: 5%;
+    background-color: rgb(88, 63, 15);
+    border: 2px solid  #452a0a;
+    margin-bottom: 10px;
+    padding-left: 7px;
+    border-radius: 5px;
+    margin-left: 0px;
+}
+
+.user-p {
+    color: white;
+    font-weight: 900;
+    font-size: 15px;
+    letter-spacing: 1.2px;
+}

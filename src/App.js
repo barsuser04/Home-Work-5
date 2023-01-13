@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Expenses from "./components/Expenses/Expenses";
+import UserForm from "./components/NewUser/UserForm";
 
 function App() {
+  const [user, SetUser] = useState([
+    
+  ]);
+
+  const addNewUserHandler = (data) => {
+    const upDateUser = [...user];
+    upDateUser.push(data);
+    SetUser(upDateUser);
+  };
+
+  user.sort((a,b) => {
+    return b.year - a.year
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="App">
+        <UserForm onNewExpenseAdd={addNewUserHandler}/>
+      </div>
+
+      <div className="app-2">
+        <Expenses expenses={user} />
+      </div>
     </div>
   );
 }

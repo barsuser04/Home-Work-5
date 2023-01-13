@@ -1,0 +1,13 @@
+.label-div {
+    display: flex;
+    flex-direction: column;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.label-div label {
+    color: white;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
